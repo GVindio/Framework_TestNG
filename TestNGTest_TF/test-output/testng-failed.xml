@@ -5,9 +5,9 @@
     <classes>
       <class name="testCases.TestCases">
         <methods>
+          <include name="validateDuplicatedCategory"/>
           <include name="setUp"/>
           <include name="breakDown"/>
-          <include name="validatemonths"/>
         </methods>
       </class> <!-- testCases.TestCases -->
     </classes>
