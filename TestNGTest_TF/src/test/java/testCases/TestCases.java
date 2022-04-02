@@ -18,7 +18,7 @@ public class TestCases extends TestBase {
 	public void setUp() {
 
 		startBrowser(); // Arrived at page
-		testpages = new TestPages();
+		testpages = new TestPages(); // Create object of TestPages
 
 }
 	
@@ -30,10 +30,10 @@ public class TestCases extends TestBase {
 		4. Verify category displays
 		Result: When a category is added The category is displayed*/
 		
-		int min = 0;
-		int max = 10000000;
-		int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
-		String random = String.valueOf(random_int);
+		int min = 0;    // Creating a random number script 
+		int max = 10000000; // Random number from 0 to 10000000
+		int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min); // Formula for random numbers
+		String random = String.valueOf(random_int); // Value of random number
 		
 		testpages.addCategory(random); // Adding a Category
 		boolean verify = testpages.verifyHelloMoon(random); // Verifying Category - Returns a true or false value
@@ -51,6 +51,8 @@ public class TestCases extends TestBase {
 		   <dupicated category name>"  */
 		testpages.addDupCategory(); // Adding Duplicate Category
 		//testpages.addCatBtn(); // Click on Add Category button
+		boolean verify = testpages.addDupCategory();
+		Assert.assertTrue(verify);
 		
 }
 	@Test

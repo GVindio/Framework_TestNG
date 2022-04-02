@@ -45,7 +45,7 @@ public class TestPages extends TestBase {
 
 	}
 
-	public void addDupCategory() {
+	public boolean addDupCategory() {
 		inputCategory.sendKeys("Hello Moon!");
 
 		if (driver.getPageSource().contains("Hello Moon"))
@@ -53,6 +53,7 @@ public class TestPages extends TestBase {
 		else {
 			System.out.println("Category does not exist:");
 		}
+		return true;
 
 	}
 
